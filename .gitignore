@@ -34,3 +34,5 @@
 # add by wujiyang
 ImageNet-100/
 Models/
+ilsvrc12_train_lmdb
+ilsvrc12_val_lmdb
