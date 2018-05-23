@@ -1,0 +1,32 @@
+net: "/home/wujiyang/MobileNet-SSD/MobileNetV2_train_val.prototxt"
+
+#ImageNet-100 
+# train = 128367    batch_size:64   128367/64 ~= 2005 iters/epoch
+# val = 1000       batch_szie:4     1000/4 =  250 iters/epoch
+
+test_iter: 250 
+test_interval: 4000
+test_initialization: false
+
+average_loss: 20
+
+base_lr: 0.01
+lr_policy: "multistep"
+gamma: 0.1
+
+stepvalue: 10000     #5 epoch 0.01  
+stepvalue: 20000     #5 epoch 0.001
+stepvalue: 30000     #5 epoch 0.0001
+stepvalue: 36000     #3 epoch 0.00001
+max_iter: 40000      #2 epoch 0.000001 
+
+
+iter_size: 2
+display: 100
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 5000
+snapshot_prefix: "/home/wujiyang/MobileNet-SSD/Models/imagenet-100"
+
+solver_mode: GPU
+
