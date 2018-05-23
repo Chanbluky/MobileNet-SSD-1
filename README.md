@@ -16,7 +16,8 @@ MobileNetV2_DW_solver.prototxt: training config file
 ## DepthwiseConvolution  
 The implementation of depthwise convolution is from [yonghenglh6/DepthwiseConvolution
 ](https://github.com/yonghenglh6/DepthwiseConvolution)  
-source code is in src folder
+
+Source code is in src folder. And by the way, during training, **DepthwiseConvolution is faster than Group Convolution about most 15 times**.
 
 ## Results on ImageNet-100
 Because of the limitation of my GPUs, I only use 100 classes from imagenet for train. The train data is selected randomly
