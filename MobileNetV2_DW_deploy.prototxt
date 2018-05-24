@@ -126,7 +126,7 @@ layer{
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 32
         stride: 1
         weight_filler {
             type: "msra"
@@ -281,7 +281,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 96
         stride: 2
         weight_filler {
             type: "msra"
@@ -435,7 +435,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 144
         stride: 1
         weight_filler {
             type: "msra"
@@ -599,7 +599,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 144
         stride: 2
         weight_filler {
             type: "msra"
@@ -758,7 +758,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-       
+        group: 192
         stride: 1
         weight_filler {
             type: "msra"
@@ -923,7 +923,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 192
         stride: 1
         weight_filler {
             type: "msra"
@@ -1089,7 +1089,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 192
         stride: 2
         weight_filler {
             type: "msra"
@@ -1248,7 +1248,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 384
         stride: 1
         weight_filler {
             type: "msra"
@@ -1413,7 +1413,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 384
         stride: 1
         weight_filler {
             type: "msra"
@@ -1578,7 +1578,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 384
         stride: 1
         weight_filler {
             type: "msra"
@@ -1744,7 +1744,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 384
         stride: 1
         weight_filler {
             type: "msra"
@@ -1903,7 +1903,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 576
         stride: 1
         weight_filler {
             type: "msra"
@@ -2068,7 +2068,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 576
         stride: 1
         weight_filler {
             type: "msra"
@@ -2234,7 +2234,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 576
         stride: 2
         weight_filler {
             type: "msra"
@@ -2393,7 +2393,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 960
         stride: 1
         weight_filler {
             type: "msra"
@@ -2560,7 +2560,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 960
         stride: 1
         weight_filler {
             type: "msra"
@@ -2731,7 +2731,7 @@ layer {
         bias_term: false
         pad: 1
         kernel_size: 3
-        
+        group: 960
         stride: 1
         weight_filler {
             type: "msra"
@@ -2887,15 +2887,15 @@ layer {
         global_pooling: true
     }
 }
-layer {
-    name: "Dropout"
-    type: "Dropout"
-    bottom: "pool9"
-    top: "pool9"
-    dropout_param {
-        dropout_ratio : 0.2
-    }
-}
+#layer {
+#    name: "Dropout"
+#    type: "Dropout"
+#    bottom: "pool9"
+#    top: "pool9"
+#    dropout_param {
+#        dropout_ratio : 0.2
+#    }
+#}
 layer {
     name: "fc10"
     type: "Convolution"

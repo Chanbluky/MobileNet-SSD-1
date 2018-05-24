@@ -5,8 +5,8 @@ net: "/home/wujiyang/MobileNet-SSD/MobileNetV2_DW_train_val.prototxt"
 # val = 1000       batch_szie:8    1000/8 =  125 iters/epoch
 
 test_iter: 125 
-test_interval: 5000
-test_initialization: false
+test_interval: 4000
+test_initialization: true
 
 average_loss: 20
 
@@ -14,11 +14,11 @@ base_lr: 0.01
 lr_policy: "multistep"
 gamma: 0.1
 
-stepvalue: 20000     #5  epoch 0.01  
-stepvalue: 60000     #10 epoch 0.001
-stepvalue: 80000     #5  epoch 0.0001
-stepvalue: 90000     #3  epoch 0.00001
-max_iter: 100000      #2  epoch 0.000001 
+stepvalue: 10000     #2  epoch 0.01  
+stepvalue: 45000     #8  epoch 0.001
+stepvalue: 70000     #7  epoch 0.0001
+stepvalue: 85000     #4  epoch 0.00001
+max_iter: 90000      #2  epoch 0.000001 
 
 
 #iter_size: 2
@@ -26,7 +26,7 @@ display: 50
 momentum: 0.9
 weight_decay: 0.0005
 snapshot: 5000
-snapshot_prefix: "/home/wujiyang/MobileNet-SSD/Models/imagenet-100"
+snapshot_prefix: "/home/wujiyang/MobileNet-SSD/Models/Imagenet-100"
 
 solver_mode: GPU
 
