@@ -25,7 +25,7 @@ Because of the limitation of my GPUs, I only use 100 classes from imagenet for t
 | Name | accuracy/top1 | accuracy/top5 | inference time | model size |Depthwise conv type |
 | - | :-: | :-: | :-: | :-: | -: |
 | MobileNetV2 | 85% | 90% | | |group convolution |
-| MobileNetV2_dw | 67.6% | 86.2% | | | depthwise convolution |
+| MobileNetV2_dw | 67.6% | 89.3% | | | depthwise convolution |
 
 
 ## Detection Result of MobileNet-SSD
