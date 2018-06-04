@@ -1880,7 +1880,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 192
-    stride: 2
+    stride: 1
     weight_filler {
       type: "msra"
     }
@@ -2982,7 +2982,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 384
-    stride: 1
+    stride: 2
     weight_filler {
       type: "msra"
     }
