@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*- 
 
 '''
-remove the softmax layer after training process, if possibile, remove the data layer also
+remove the softmax layer after training process, if possibile, remove the data layer also.
 only preserve the feature embedding layer
 '''
 

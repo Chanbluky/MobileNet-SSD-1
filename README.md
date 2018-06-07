@@ -29,3 +29,9 @@ Because of the limitation of my GPUs, I only use 100 classes from imagenet for t
 
 
 ## Detection Result of MobileNet-SSD
+
+
+## How To Use 
+1. add the depthwise_conv_layer to caffe-ssd.
+2. prepare train and test data， just as same as [caffe-ssd](https://github.com/weiliu89/caffe/tree/ssd) did.  
+3. train MobileNetV2-SSD.
