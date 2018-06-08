@@ -3691,34 +3691,7 @@ layer{
     bottom: "Conv9"
     top: "Conv9"
 }
-#### average pooling #####
 
-layer {
-  name: "accuracy/top1"
-  type: "Accuracy"
-  bottom: "fc10"
-  bottom: "label"
-  top: "accuracy/top1"
-  include {
-    phase: TEST
-  }
-  accuracy_param {
-    top_k: 1
-  }
-}
-layer {
-  name: "accuracy/top5"
-  type: "Accuracy"
-  bottom: "fc10"
-  bottom: "label"
-  top: "accuracy/top5"
-  include {
-    phase: TEST
-  }
-  accuracy_param {
-    top_k: 3
-  }
-}
 ##############SSD Head################
 #Block_4_3
 layer {
